@@ -88,7 +88,7 @@ nav .m-menu ul {
   height: 100%;
   overflow-y: auto;
 }
-nav .m-menu ul li a,
+nav .m-menli u ul a,
 nav .m-menu ul li label {
   display: block;
   text-align: left;
@@ -162,20 +162,16 @@ nav div.control label.func{
 
 /*主要內容*/
 .container {
-  /* background-color: rgba(145, 207, 161, 0.2); */
   width: 100%;
-  /* height: 600px; */
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 10%);
-  -moz-transform: translate(-50%, 10%);
-  -o-transform: translate(-50%, 10%);
-  -ms-transform: translate(-50%, 10%);
-  -webkit-transform: translate(-50%, 10%);
-  padding: 30px;
+  padding: 40px;
 }
-.container {
+span{
+  width: 100%;
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+section{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -185,7 +181,7 @@ nav div.control label.func{
   display: flex;
   flex-direction: column;
 }
-.box {
+div[id*=box] {
   border-radius: 15px;
   margin: 5px;
   display: -ms-flexbox;
@@ -207,6 +203,11 @@ nav div.control label.func{
   background-color: #ffffff;
   width: 400px;
   height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+#box2 {
+  font-size: 20px;
 }
 #box3 {
   background-color: #ffffff;
@@ -218,10 +219,28 @@ nav div.control label.func{
   width: 120px;
   height: 80px;
   color: #fff;
-  text-align: center;
-  padding: 30px 10px;
   border-radius: 15px;
+  line-height: 80px;
+  text-align: center;
+}
+#target {
+  width: 122px;
+  height: 82px;
+  border-radius: 17px;
+  border: 1px solid gray;
+}
+#target.hover{
+  background-color: rgb(255, 247, 27);
+}
+.element.dragging {
+  opacity: 0.5;
 }
 [draggable="true"] {
   cursor: move;
 }
+
+/* 關卡切換 */
+#level2 {
+  display: none;
+}
+
