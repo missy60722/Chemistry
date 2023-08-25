@@ -63,6 +63,5 @@ for (let i = 0; i < target.length; i++) {
 // video replay
 videoReplay.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log(videoStart);
   videoStart.play();
 });
