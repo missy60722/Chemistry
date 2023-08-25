@@ -28,6 +28,8 @@ for (let i = 0; i < element.length; i++) {
   });
 }
 
+let videoReplay = document.querySelector(".replay");
+let videoStart = document.querySelector("video");
 const target = document.querySelectorAll(".target");
 for (let i = 0; i < target.length; i++) {
   target[i].addEventListener("drag", (event) => {
@@ -47,8 +49,20 @@ for (let i = 0; i < target.length; i++) {
     event.preventDefault();
   });
   target[i].addEventListener("drop", (event) => {
+    console.log(source.parent);
     event.target.appendChild(source);
     event.target.classList.remove("hover");
+    if (source.classList.contains("answer")) {
+      videoStart.style = "display:block";
+      videoReplay.style = "opacity:1";
+    }
     event.stopImmediatePropagation();
   });
 }
+
+// video replay
+videoReplay.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log(videoStart);
+  videoStart.play();
+});
