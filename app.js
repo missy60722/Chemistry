@@ -29,7 +29,8 @@ for (let i = 0; i < element.length; i++) {
 }
 
 let videoReplay = document.querySelector(".replay");
-let videoStart = document.querySelector("video");
+const video = document.createElement("video");
+const box3 = document.querySelector("#box3");
 const target = document.querySelectorAll(".target");
 for (let i = 0; i < target.length; i++) {
   target[i].addEventListener("drag", (event) => {
@@ -53,7 +54,11 @@ for (let i = 0; i < target.length; i++) {
     event.target.appendChild(source);
     event.target.classList.remove("hover");
     if (source.classList.contains("answer")) {
-      videoStart.style = "display:block";
+      video.src = "./pictures/co2.mp4";
+      video.width = 400;
+      video.autoplay = true;
+      box3.appendChild(video);
+      // videoStart.style = "display:block";
       videoReplay.style = "opacity:1";
     }
     event.stopImmediatePropagation();
@@ -63,5 +68,5 @@ for (let i = 0; i < target.length; i++) {
 // video replay
 videoReplay.addEventListener("click", (event) => {
   event.preventDefault();
-  videoStart.play();
+  video.play();
 });
