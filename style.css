@@ -159,9 +159,6 @@ nav label.ham {
 nav div.control label.func{
   margin: 15px;
 }
-.replay{
-  opacity: 0.5;
-}
 
 /*主要內容*/
 .container {
@@ -173,12 +170,6 @@ span{
   font-size: 25px;
   text-align: center;
   padding-bottom: 30px;
-}
-section{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 .right {
   display: flex;
@@ -194,13 +185,17 @@ div[id*=box] {
   flex-wrap: wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  -webkit-align-content: space-evenly;
-  align-content: space-evenly;
+  -webkit-align-content: space-around;
+  align-content: space-around;
 }
 #box1 {
   background-color: #ffffff;
   width: 400px;
   height: 480px;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #box2 {
   background-color: #ffffff;
@@ -231,6 +226,24 @@ div[id*=box] {
   text-align: center;
   margin: 0 20px;
 }
+#element1{
+  order: 0;
+}
+#element2{
+  order: 1;
+}
+#element3{
+  order: 2;
+}
+#element4{
+  order: 3;
+}
+#element5{
+  order: 4;
+}
+#element6{
+  order: 5;
+}
 #target {
   width: 80px;
   height: 80px;
@@ -238,8 +251,11 @@ div[id*=box] {
   border: 1px solid gray;
   text-align: center;
 }
-#target.hover{
-  background-color: rgb(255, 247, 27);
+.droppable.hover.not{
+  background-color: red;
+}
+.droppable.hover.answer{
+  background-color: yellow; /* 亮红色 */
 }
 .element.dragging {
   opacity: 0.5;
@@ -249,7 +265,18 @@ div[id*=box] {
 }
 
 /* 關卡切換 */
-#level2 {
+/* 隐藏所有的部分 */
+section {
   display: none;
 }
+
+/* 显示当前部分 */
+section.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
 

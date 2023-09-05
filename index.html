@@ -11,12 +11,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
   </head>
   <body>
-    <!-- animation -->
-    <div class="animation">
+    <!-- animation <div class="animation">
       <svg width="408" height="326" viewBox="0 0 408 326" fill="none" xmlns="http://www.w3.org/2000/svg" class="animation">
           <path d="M112.062 246.238V246.167L111.136 247.677C104.903 257.841 101.566 269.454 101.501 281.392C95.2695 283.531 88.5559 284.75 81.6 284.75C48.0881 284.75 20.9 257.594 20.9 224.125V40.75V40.25H20.4C9.39181 40.25 0.5 31.3682 0.5 20.375C0.5 9.3818 9.39181 0.5 20.4 0.5H142.8C153.808 0.5 162.7 9.3818 162.7 20.375C162.7 31.3682 153.808 40.25 142.8 40.25H142.3V40.75V197.177L112.062 246.238ZM61.2 40.25H60.7V40.75V101.875V102.375H61.2H102H102.5V101.875V40.75V40.25H102H61.2ZM326.4 40.25H325.9V40.75V136.831V136.973L325.974 137.093L401.008 258.897C405.231 265.759 407.5 273.691 407.5 281.812C407.5 305.921 387.898 325.5 363.757 325.5H166.642C142.502 325.5 122.9 305.921 122.9 281.812C122.9 273.756 125.168 265.824 129.392 258.897C129.393 258.896 129.393 258.896 129.393 258.895L204.426 137.093L204.5 136.973V136.831V40.75V40.25H204C192.992 40.25 184.1 31.3682 184.1 20.375C184.1 9.3818 192.992 0.5 204 0.5H326.4C337.408 0.5 346.3 9.3818 346.3 20.375C346.3 31.3682 337.408 40.25 326.4 40.25ZM244.8 40.25H244.3V40.75V142.625C244.3 146.29 243.305 149.893 241.378 153.06C241.377 153.061 241.377 153.061 241.377 153.062L210.268 203.487L209.798 204.25H210.694H319.706H320.602L320.132 203.487L289.022 153.059L289.021 153.058C287.096 149.957 286.1 146.356 286.1 142.625V40.75V40.25H285.6H244.8Z" stroke="white" class="logo" id="logo"/>
           </svg>
-    </div>
+    </div>-->
+    
     <!-- #導覽列 -->
       <nav>
         <!-- 漢堡選單 -->
@@ -160,7 +160,7 @@
 
           <!-- 重玩 -->
           <input type="checkbox" id="return" name="return" class="m-menu__checkbox">
-          <label class="m-menu__toggle func">
+          <label class="m-menu__toggle func return">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38"></path>
             </svg>
@@ -168,7 +168,7 @@
           
           <!-- 上一題 -->
           <input type="checkbox" id="previous" name="previous" class="m-menu__checkbox">
-          <label class="m-menu__toggle func">
+          <label class="m-menu__toggle func previous">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M15 18l-6-6 6-6"></path>
             </svg>
@@ -176,7 +176,7 @@
           
           <!-- 下一題 -->
           <input type="checkbox" id="next" name="next" class="m-menu__checkbox">
-          <label class="m-menu__toggle func">
+          <label class="m-menu__toggle func next">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 18l6-6-6-6"></path> 
             </svg>
@@ -185,8 +185,8 @@
       </nav>
 
       <div class="container">
-        <section id="level1">
-          <span id="level">測試1</span>
+        <section id="section1">
+          <span class="level" data-target="level-1.1"></span>
           <div class="target" id="box1">
             <div class="element" id="element1" draggable="true">H<sub>2</sub></div>
             <div class="element answer" id="element2" draggable="true">C</div>
@@ -197,14 +197,15 @@
           </div>
           <div class="right">
             <div class="box" id="box2">
-              <div class="target" id="target"></div><p style="display: inline-block; margin: 0 1rem;">+</p><img src="./pictures/氧氣.png" width="80px" height="80px" ><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 1rem;"><path d="M5 12h13M12 5l7 7-7 7"></path></svg><img src="./pictures/二氧化碳.png" width="80px" height="80px"></img>
+              <div class="target droppable" id="target"></div><p style="display: inline-block; margin: 0 1rem;">+</p><img src="./pictures/氧氣.png" width="80px" height="80px" ><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 1rem;"><path d="M5 12h13M12 5l7 7-7 7"></path></svg><img src="./pictures/二氧化碳.png" width="80px" height="80px"></img>
             </div>
             <div class="box" id="box3">
             </div>
           </div>
         </section>
-        <section id="level2">
-          <span id="level">測試2</span>
+
+        <section id="section2">
+          <span class="level" data-target="level-1.2"></span>
           <div class="target" id="box1">
             <div class="element" id="element1" draggable="true">H<sub>2</sub></div>
             <div class="element" id="element2" draggable="true">C</div>
@@ -216,6 +217,44 @@
           <div class="right">
             <div class="box" id="box2">
               <div class="target" id="target"></div><p>&emsp;+&emsp;O<sub>2</sub>&emsp;<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"></path></svg>&emsp;CO<sub>2</sub></>
+            </div>
+            <div class="box" id="box3">
+            </div>
+          </div>
+        </section>
+
+        <section id="section3">
+          <span class="level" data-target="level-2.1"></span>
+          <div class="target" id="box1">
+            <div class="element" id="element1" draggable="true">H<sub>2</sub></div>
+            <div class="element answer" id="element2" draggable="true">C</div>
+            <div class="element" id="element3" draggable="true">CO</div>
+            <div class="element" id="element4" draggable="true">O<sub>2</sub></div>
+            <div class="element" id="element5" draggable="true">O<sub>3</sub></div>
+            <div class="element" id="element6" draggable="true">C<sub>3</sub>O<sub>2</sub></div>
+          </div>
+          <div class="right">
+            <div class="box" id="box2">
+              <div class="target droppable" id="target"></div><p style="display: inline-block; margin: 0 1rem;">+</p><img src="./pictures/氧氣.png" width="80px" height="80px" ><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 1rem;"><path d="M5 12h13M12 5l7 7-7 7"></path></svg><img src="./pictures/二氧化碳.png" width="80px" height="80px"></img>
+            </div>
+            <div class="box" id="box3">
+            </div>
+          </div>
+        </section>
+
+        <section id="section4">
+          <span class="level" data-target="level-2.2"></span>
+          <div class="target" id="box1">
+            <div class="element" id="element1" draggable="true">H<sub>2</sub></div>
+            <div class="element answer" id="element2" draggable="true">C</div>
+            <div class="element" id="element3" draggable="true">CO</div>
+            <div class="element" id="element4" draggable="true">O<sub>2</sub></div>
+            <div class="element" id="element5" draggable="true">O<sub>3</sub></div>
+            <div class="element" id="element6" draggable="true">C<sub>3</sub>O<sub>2</sub></div>
+          </div>
+          <div class="right">
+            <div class="box" id="box2">
+              <div class="target droppable" id="target"></div><p style="display: inline-block; margin: 0 1rem;">+</p><img src="./pictures/氧氣.png" width="80px" height="80px" ><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 1rem;"><path d="M5 12h13M12 5l7 7-7 7"></path></svg><img src="./pictures/二氧化碳.png" width="80px" height="80px"></img>
             </div>
             <div class="box" id="box3">
             </div>
