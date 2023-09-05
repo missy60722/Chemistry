@@ -72,7 +72,7 @@ for (let i = 0; i < target.length; i++) {
       videoReplay.style.cursor = "pointer";
       videoReplay.disabled = false;
       video.src = "./pictures/co2.mp4";
-      video.width = 400;
+      video.width = 500;
       video.autoplay = true;
       box3.appendChild(video);
       // videoStart.style = "display:block";

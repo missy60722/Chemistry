@@ -190,8 +190,8 @@ div[id*=box] {
 }
 #box1 {
   background-color: #ffffff;
-  width: 400px;
-  height: 480px;
+  width: 500px;
+  height: 500px;
   padding-top: 130px;
   padding-bottom: 130px;
   padding-left: 20px;
@@ -199,13 +199,13 @@ div[id*=box] {
 }
 #box2 {
   background-color: #ffffff;
-  width: 400px;
-  height: 150px;
+  width: 500px;
+  height: 160px;
   align-items: center;
   justify-content: center;
 }
 #box2 p {
-  font-size: 40px;
+  font-size: 30px;
 }
 #box2 .element {
   position: relative;
@@ -213,8 +213,8 @@ div[id*=box] {
 }
 #box3 {
   background-color: #000000;
-  width: 400px;
-  height: 320px;
+  width: 500px;
+  height: 330px;
 }
 .element {
   background-color: rgb(21, 21, 75);
