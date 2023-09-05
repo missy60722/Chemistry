@@ -1,10 +1,10 @@
 // 開場動畫
-/*const lastWord = document.querySelector("#logo");
+const lastWord = document.querySelector("#logo");
 const animation = document.querySelector("div.animation");
 lastWord.addEventListener("animationend", () => {
   animation.style =
     "transition: all 5s; opacity: 0; pointer-events: none; transition-delay: 1.5s";
-});*/
+});
 
 //拖曳＆放置
 let source = null;
